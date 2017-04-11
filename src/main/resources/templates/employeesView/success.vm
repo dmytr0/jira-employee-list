@@ -1,0 +1,42 @@
+#disable_html_escaping()
+$webResourceManager.requireResourcesForContext("employees-view-list")
+
+##<head>
+##    <title>Список сотрудников</title>
+##    <link rel="shortcut icon" href="$!requestContext.canonicalBaseUrl/download/resources/ua.softlist.employee.employees-list:employees-list-resources/images/favicon.ico" type="image/x-icon">
+##</head>
+
+<div class="employees-view-container">
+
+    <div class="legenda">
+        <ul>
+            <li><span class="square bd-now"></span>Сегодня празднует День Рождения</li>
+            <li><span class="square bd-ended"></span>Недавно был День Рождения! Еще не поздно поздравить!</li>
+            <li><span class="square bd-soon"></span>День Рождения скоро! Не забудьте подготовить подарок!</li>
+        </ul>
+
+    </div>
+
+    #if( $isHr )
+        <p class="edit-employees"><a href="employees.jspa" class="aui-button aui-button-primary">Редактировать сотрудников</a></p>
+    #end
+    <div>
+        <label for="employee-filter">Фильтр: </label>
+        <input placeholder="Начните ввод..." id="employee-filter" type="text">
+    </div>
+
+    <table id="employees-table" class="aui">
+        <thead>
+        <tr>
+            <th class="headerSortUp">Отдел</th>
+            <th>ФИО</th>
+            <th>Должность</th>
+            <th>Вн. телефон</th>
+            <th>Моб. телефон</th>
+            <th>e-mail</th>
+            <th>День рождения</th>
+        <tr>
+        </thead>
+    </table>
+
+</div>

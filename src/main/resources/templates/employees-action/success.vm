@@ -1,0 +1,10 @@
+#disable_html_escaping()
+$webResourceManager.requireResourcesForContext("employees-list")
+
+
+
+<div class="employees-container">
+
+    <table id="employees-table"></table>
+
+</div>
