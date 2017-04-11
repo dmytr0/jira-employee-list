@@ -73,6 +73,11 @@ img.bdimg {
 .bd-ended a {
     color: white;
 }
+.emImg:hover{
+    height: 250px;
+    position: absolute;
+    z-index: 1000;
+}
 
 
 

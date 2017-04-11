@@ -28,6 +28,7 @@ $webResourceManager.requireResourcesForContext("employees-view-list")
     <table id="employees-table" class="aui">
         <thead>
         <tr>
+            <th> </th>
             <th class="headerSortUp">Отдел</th>
             <th>ФИО</th>
             <th>Должность</th>
