@@ -2,7 +2,7 @@ var rowTemplate =
     '<td class="emdata emdep"><%= emDep %></td>' +
     '<td class="emdata emName"><%= emName %></td>' +
     '<td class="emdata emPosition"><%= emPosition %></td>' +
-    '<td class="emdata emInPhone"><%= emInPhone %></td>' +
+    '<td class="emdata emInPhone"><a href="tel:<%= emInPhone %>"><%= emInPhone %></a></td>' +
     '<td class="emdata emExtPhone"><a href="tel:<%= emExtPhone %>"><%= emExtPhone %></a></td>' +
     '<td class="emdata emEmail"><a href="mailto:<%= emEmail %>"><%= emEmail %></a></td>' +
     '<td class="emdata emBirthday"><%= emBirthday %></td>'+

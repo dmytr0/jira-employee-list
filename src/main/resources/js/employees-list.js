@@ -55,10 +55,36 @@ var restTable;
 
 var bdEditView = AJS.RestfulTable.CustomEditView.extend({
     render: function (self) {
-        console.log(self);
         var $bdate = AJS.$('<input class="aui-date-picker"  name="'+self.name+'" />');
         $bdate.val(self.value);
         return $bdate;
+    }
+});
+
+var imgEditView = AJS.RestfulTable.CustomEditView.extend({
+    render: function (self) {
+        var $img = AJS.$('<input class="imgfile" type="file" accept="image/gif,image/png,image/jpeg,image/pjpeg">'+
+                         '<input class="imgb64" name="'+self.name+'" style="display: none" type="text" value="' + self.value + '">'
+        );
+
+        return $img;
+    }
+});
+
+
+var imgViewView = AJS.RestfulTable.CustomReadView.extend({
+    render: function (self) {
+        var $img;
+        if(self.value.length > 10) {
+            $img = AJS.$('<input class="imgfile" type="file" accept="image/gif,image/png,image/jpeg,image/pjpeg">' +
+                '<input class="imgb64" name="' + self.name + '" style="display: none" type="text" value="' + self.value + '">');
+
+        }else {
+            $img = AJS.$('<input class="imgfile" type="file" accept="image/gif,image/png,image/jpeg,image/pjpeg">' +
+                '<input class="imgb64" name="' + self.name + '" style="display: none" type="text" value="' + self.value + '">');
+        }
+
+        return $img;
     }
 });
 
@@ -104,6 +130,11 @@ function fillTable(){
                 id: "emBirthday",
                 header: "Д/Р",
                 editView: bdEditView
+            },
+            {
+                id: "img",
+                header: "Фото",
+                editView: imgEditView
             }
         ],
 
