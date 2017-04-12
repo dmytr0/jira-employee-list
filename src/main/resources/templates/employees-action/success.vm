@@ -8,3 +8,18 @@ $webResourceManager.requireResourcesForContext("employees-list")
     <table id="employees-table"></table>
 
 </div>
+
+<div id="i18n" style="display: none">
+
+    <p id="employee-department">$i18n.getText('employee.department')</p>
+    <p id="employee-name">$i18n.getText('employee.name')</p>
+    <p id="employee-position">$i18n.getText('employee.position')</p>
+    <p id="employee-in-phone">$i18n.getText('employee.in.phone')</p>
+    <p id="employee-ext-phone">$i18n.getText('employee.ext.phone')</p>
+    <p id="employee-email">$i18n.getText('employee.email')</p>
+    <p id="employee-birthday">$i18n.getText('employee.birthday')</p>
+    <p id="employee-photo">$i18n.getText('employee.photo')</p>
+    <p id="employee-no-users">$i18n.getText('employee.no.users')</p>
+    <p id="employee-loading">$i18n.getText('employee.loading')</p>
+
+</div>

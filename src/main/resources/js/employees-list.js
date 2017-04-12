@@ -119,46 +119,46 @@ function fillTable(){
         columns: [
             {
                 id: "emDep",
-                header: "Отдел"
+                header: AJS.$("#employee-department").text()
             },
 
             {
                 id: "emName",
-                header: "Имя"
+                header: AJS.$("#employee-name").text()
             },
 
             {
                 id: "emPosition",
-                header: "Должность"
+                header: AJS.$("#employee-position").text()
             },
 
             {
                 id: "emInPhone",
-                header: "Вн. тел."
+                header: AJS.$("#employee-in-phone").text()
             },
             {
                 id: "emExtPhone",
-                header: "Личный тел."
+                header: AJS.$("#employee-ext-phone").text()
             },
             {
                 id: "emEmail",
-                header: "e-mail"
+                header: AJS.$("#employee-email").text()
             },
             {
                 id: "emBirthday",
-                header: "Д/Р",
+                header: AJS.$("#employee-birthday").text(),
                 editView: bdEditView
             },
             {
                 id: "img",
-                header: "Фото",
+                header: AJS.$("#employee-photo").text(),
                 editView: imgEditView,
                 readView: imgViewView
             }
         ],
 
-        noEntriesMsg: "Не добавлено ни одного сотрудника. Let's do it!",
-        loadingMsg: "Загружаются данные... Подождите...",
+        noEntriesMsg: AJS.$("#employee-no-users").text(),
+        loadingMsg: AJS.$("#employee-loading").text(),
         allowCreate: isHr,
         allowEdit: isHr,
         allowReorder: false,

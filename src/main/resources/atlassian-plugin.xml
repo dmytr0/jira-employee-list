@@ -9,7 +9,7 @@
     <param name="plugin-logo">images/pluginLogo.png</param>
   </plugin-info>
   <!-- add our i18n resource -->
-  <resource type="i18n" name="i18n" location="employees-list"/>
+  <resource type="i18n" name="i18n" location="i18n/employees-list"/>
   <!-- add our web resources -->
   <web-resource key="employees-list-resources" name="employees-list Web Resources">
     <dependency>com.atlassian.auiplugin:ajs</dependency>
@@ -19,31 +19,31 @@
     <resource type="download" name="employees-list.js" location="/js/employees-list.js"/>
     <context>employees-list</context>
   </web-resource>
-
   <web-resource key="employees-view-list-resources" name="employees--viewlist Web Resources">
+
     <dependency>com.atlassian.auiplugin:ajs</dependency>
     <dependency>com.atlassian.auiplugin:aui-table-sortable</dependency>
     <resource type="download" name="employees-list.css" location="/css/employees-list.css"/>
     <resource type="download" name="employees-view-list.js" location="/js/employees-view-list.js"/>
     <context>employees-view-list</context>
   </web-resource>
-
-
   <!-- main menu -->
+
+
   <web-item key="employee-mainmenu-key" name="employee mainmenu" section="system.top.navigation.bar" weight="40">
-    <label>Сотрудники</label>
+    <label key="employee.employee"/>
     <link linkId="employee-main-link">/secure/employeesview.jspa</link>
   </web-item>
 
-  <webwork1 key="employees-action" name="EmployeesAction" i18n-name-key="employees-action.name">
 
+
+  <webwork1 key="employees-action" name="EmployeesAction" i18n-name-key="employees-action.name">
     <actions>
       <action name="ua.softlist.employee.jira.webwork.EmployeesAction" alias="employees">
         <view name="success">/templates/employees-action/success.vm</view>
       </action>
     </actions>
   </webwork1>
-
   <webwork1 key="employees-view-action" name="EmployeesViewAction" i18n-name-key="employees-view-action.name">
     <actions>
       <action name="ua.softlist.employee.jira.webwork.EmployeesViewAction" alias="employeesview">
@@ -51,11 +51,9 @@
       </action>
     </actions>
   </webwork1>
-
-  <rest name="HR 360 Rest"  key="hr-360-rest" path="/employee" version="1"></rest>
-
+  <rest name="HR 360 Rest" key="hr-360-rest" path="/employee" version="1"/>
   <ao key="Employees-ao-module">
-      <entity>ua.softlist.employee.jira.Entity.EmployeeEntity</entity>
+    <entity>ua.softlist.employee.jira.Entity.EmployeeEntity</entity>
   </ao>
 
 </atlassian-plugin>

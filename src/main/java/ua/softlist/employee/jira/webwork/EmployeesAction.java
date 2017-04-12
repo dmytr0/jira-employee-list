@@ -1,8 +1,8 @@
 package ua.softlist.employee.jira.webwork;
 
+import com.atlassian.jira.web.action.JiraWebActionSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.atlassian.jira.web.action.JiraWebActionSupport;
 
 public class EmployeesAction extends JiraWebActionSupport
 {
