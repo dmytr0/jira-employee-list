@@ -5,8 +5,14 @@
     <description>${project.description}</description>
     <version>${project.version}</version>
     <vendor name="${project.organization.name}" url="${project.organization.url}"/>
-    <param name="plugin-icon">images/pluginIcon.png</param>
-    <param name="plugin-logo">images/pluginLogo.png</param>
+    <param name="plugin-icon">images/employee-icon.png</param>
+    <param name="plugin-logo">images/employee-logo.png</param>
+    <param name="plugin-banner">images/banner.png</param>
+    <param name="vendor-icon">images/v-icon.png</param>
+    <param name="vendor-logo">images/v-logo.png</param>
+    <param name="configure.url">/secure/employees.jspa</param>
+    <param name="atlassian-data-center-compatible">true</param>
+
   </plugin-info>
   <!-- add our i18n resource -->
   <resource type="i18n" name="i18n" location="i18n/employees-list"/>

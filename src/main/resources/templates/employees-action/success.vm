@@ -2,12 +2,18 @@
 $webResourceManager.requireResourcesForContext("employees-list")
 
 
+#if( $isHr )
 
-<div class="employees-container">
+    <div class="employees-container">
 
-    <table id="employees-table"></table>
+        <table id="employees-table"></table>
 
-</div>
+    </div>
+#else
+
+    <p>PERMISSION ERROR! YOU A NOT A MEMBER OF 'HR360' GROUP!</p>
+
+#end
 
 <div id="i18n" style="display: none">
 
