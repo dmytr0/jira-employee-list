@@ -1,6 +1,6 @@
 This is plugin for JIRA
 
-It's provide a mutable list of employee (Department, Name, Position, Internal and External phone number, e-mail and Birthday).
+It's provide a mutable list of employee (Department, Name, Position, Internal and External phone number, e-mail, Birthday and photo).
 
 Highlights the birthday.
 
