@@ -1,32 +1,22 @@
 var isHr = false;
 AJS.$(document).ready(function(){
-
-
     whoLoggined();
-
     AJS.$(document).on("change", "input[type=file]", fileSelected);
-
-
 });
 
 function fileSelected(){
-
-
-
     if (this.files && this.files[0]) {
 
         var FR= new FileReader();
         var inp = AJS.$(this);
         FR.addEventListener("load", function(e) {
             try {
-                var b64 = inp.siblings(".imgb64");
-
+                var b64 = inp.closest("form").find(".imgb64");
                 b64.val(e.target.result);
 
             }catch (e){
                 console.log(e);
             }
-
         });
 
         FR.readAsDataURL( this.files[0] );
@@ -91,13 +81,12 @@ var imgEditView = AJS.RestfulTable.CustomEditView.extend({
     render: function (self) {
         var $img = AJS.$('<form>' +
                         '<p style="display:none" id="attach-max-size">10000000</p>'+
-                        '<input class="imgfile" type="file" accept="image/gif,image/png,image/jpeg,image/pjpeg">'+
+                        //'<input class="imgfile" type="file" accept="image/gif,image/png,image/jpeg,image/pjpeg">' +
+                        '<label><img height="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAIhCAACIQgE+ZX7pAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAm1JREFUeNqVlLlvE1EQxp+TkMA/QWu58H0I+RIxkm1R2JUtWUJuLB+y3bmg8H1GdmF66MHAv0GXDokGGmhRuAIJEBMv37faZz2HLJBitG/nffObmZ33VvR6PXHRut2u/my329dms5koFAp3i8VifDqd6j5Vc9FMYZ1OZ3s8HguCfD7fEex9tVrdp497ZlBT2GQyEeVyed/hcHx3u92ay+WifavX6+G/QU1hpVLpDmA/CPN6vec0A3pSq9UiZlCzym47nc4TwFYEeTwejSah8H9FpaHLoGqFFsIqlUqUMADWMDy5XhnrX0wEOwb0FmMYu1EhsliGwyGnmbLb7RpalRVdatyjBonP0U1yMBisoeuWYVvxePxZJBI5jMViLwKBwJFR5UqBscoV96gJh8OHiUTiCWEbQAllJq75bZLJ5GNWC8iZAjyjj3vUUNvv9/8cilIlM22jfQuCnrItQJYKcEkf96ihVv1+Zgd7azQaiX8BqaH2f26KBC6MljeARssLUyAmvMOzpJxFfeIMMqa9VKYrK1xQQ638XGSQpQ+A2dRp8x3Te45gwn7Km8I1fdyTFcpC+E6WSKVSjzKZzAH+IjvqTyGbzd63Wq2aco/1NX3cU28JY8kA66GgAH+SL81m87p6BCDaTafTD0Kh0MtoNPqKxjV93JMdMYaxYBzbbDZN4LQvIXyNbPo5pIBiruVZU40+eV6p5ZqxYLzhzRGcmt/v/9hoNG4i416r1dpDBfoTdoPV8Kdq2C59qoYxjAXjE4sTuVyuinI/w/EBWd4Gg8F3VzHGMJYt5/P5e2I+nwsscqCfGhf+SmbEnJJB1m+us2D7E+JjkwAAAABJRU5ErkJggg=="><input class="imgfile" style="display:none" type="file" accept="image/gif,image/png,image/jpeg,image/pjpeg"></label>'+
                         '<input class="imgb64" name="'+self.name+'" style="display: none" type="text" value="' + self.value + '">' +
                         '<input name="pid" style="display: none" type="text" value="0">' +
             '</form>'
-
         );
-
         return $img;
     }
 });
