@@ -6,6 +6,11 @@ $webResourceManager.requireResourcesForContext("employees-list")
 
     <div class="employees-container">
 
+        <div>
+            <label for="employee-filter">$i18n.getText('employee.filter'): </label>
+            <input placeholder="$i18n.getText('employee.start.type')..." id="employee-filter" type="text">
+        </div>
+
         <table id="employees-table"></table>
 
     </div>

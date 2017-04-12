@@ -119,6 +119,7 @@ var App = Backbone.View.extend({
             AJS.tablessortable.setTableSortable(AJS.$("#employees-table"));
 
             checkBirthday();
+            sort();
         }
         catch (e){
             console.log(e);
@@ -194,4 +195,13 @@ function convertLayout (str){
     }
 
     return str;
+}
+
+function sort(){
+    AJS.$(".header").each(function(i, el){
+
+        if(i=== 1){
+            AJS.$(el).click();
+        }
+    });
 }

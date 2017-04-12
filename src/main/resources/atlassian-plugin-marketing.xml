@@ -1,15 +1,16 @@
 <atlassian-plugin-marketing>
+
     <compatibility>
-        <product respondent="jira" min="7.0" max="7.3.4"/>
+        <product name="jira" min="7.0" max="7.3.4"/>
     </compatibility>
 
     <logo image="images/employee-logo.png"/>
     <banner image="images/banner.png"/>
 
     <highlights>
-        <highlight image="images/scr/view.PNG" cropped="images/scr/view.PNG"/>
-        <highlight image="images/scr/edit.PNG" cropped="images/scr/edit.PNG"/>
-        <highlight image="images/scr/img.png" cropped="images/scr/img.png"/>
+        <highlight image="images/scr/view.PNG" cropped="images/scr/view_cr.png"/>
+        <highlight image="images/scr/edit.PNG" cropped="images/scr/edit_cr.png"/>
+        <highlight image="images/scr/img.png" cropped="images/scr/img_cr.png"/>
     </highlights>
 
     <screenshots>
