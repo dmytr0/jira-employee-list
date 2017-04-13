@@ -1,0 +1,10 @@
+#disable_html_escaping()
+$webResourceManager.requireResourcesForContext("employees-error")
+
+<div class="container">
+
+    <p class="message">$i18n.getText('employee.permission.error')</p>
+
+</div>
+
+

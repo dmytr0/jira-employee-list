@@ -33,12 +33,20 @@
     <resource type="download" name="employees-view-list.js" location="/js/employees-view-list.js"/>
     <context>employees-view-list</context>
   </web-resource>
+
+  <web-resource key="employees-error" name="employees-error Web Resources">
+    <dependency>com.atlassian.auiplugin:ajs</dependency>
+    <resource type="download" name="error.css" location="/css/error.css"/>
+    <context>employees-error</context>
+  </web-resource>
+
   <!-- main menu -->
 
 
   <web-item key="employee-mainmenu-key" name="employee mainmenu" section="system.top.navigation.bar" weight="40">
     <label key="employee.employee"/>
     <link linkId="employee-main-link">/secure/employeesview.jspa</link>
+    <condition class="ua.softlist.employee.jira.Conditions.UserCondition"/>
   </web-item>
 
 
@@ -47,13 +55,16 @@
     <actions>
       <action name="ua.softlist.employee.jira.webwork.EmployeesAction" alias="employees">
         <view name="success">/templates/employees-action/success.vm</view>
+        <view name="error">/templates/employees-action/error.vm</view>
       </action>
     </actions>
   </webwork1>
+
   <webwork1 key="employees-view-action" name="EmployeesViewAction" i18n-name-key="employees-view-action.name">
     <actions>
       <action name="ua.softlist.employee.jira.webwork.EmployeesViewAction" alias="employeesview">
         <view name="success">/templates/employeesView/success.vm</view>
+        <view name="error">/templates/employeesView/error.vm</view>
       </action>
     </actions>
   </webwork1>

@@ -1,0 +1,12 @@
+.container {
+    margin: auto;
+    width: 550px;
+    height: 300px;
+}
+
+p.message {
+    padding: 100px 10%;
+    font-size: large;
+    font-weight: 600;
+    color: red;
+}
