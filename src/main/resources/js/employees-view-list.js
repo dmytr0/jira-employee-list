@@ -115,6 +115,8 @@ var App = Backbone.View.extend({
         var html = employeesV.render().el;
         AJS.$('#employees-table').append(html);
 
+        AJS.$('.employees-spinner').spinStop();
+
         try {
             AJS.tablessortable.setTableSortable(AJS.$("#employees-table"));
 
@@ -132,6 +134,7 @@ var App = Backbone.View.extend({
 
 
 AJS.$(document).ready(function(){
+    AJS.$('.employees-spinner').spin();
     new App();
     window.onbeforeunload = null;
     AJS.$("#employee-filter").on("input", doFilter);

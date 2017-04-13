@@ -42,14 +42,11 @@
 
   <!-- main menu -->
 
-
   <web-item key="employee-mainmenu-key" name="employee mainmenu" section="system.top.navigation.bar" weight="40">
     <label key="employee.employee"/>
     <link linkId="employee-main-link">/secure/employeesview.jspa</link>
     <condition class="ua.softlist.employee.jira.Conditions.UserCondition"/>
   </web-item>
-
-
 
   <webwork1 key="employees-action" name="EmployeesAction" i18n-name-key="employees-action.name">
     <actions>
@@ -68,7 +65,9 @@
       </action>
     </actions>
   </webwork1>
+
   <rest name="HR 360 Rest" key="hr-360-rest" path="/employee" version="1"/>
+
   <ao key="Employees-ao-module">
     <entity>ua.softlist.employee.jira.Entity.EmployeeEntity</entity>
   </ao>

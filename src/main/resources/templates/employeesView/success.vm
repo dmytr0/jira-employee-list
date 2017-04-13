@@ -20,6 +20,8 @@ $webResourceManager.requireResourcesForContext("employees-view-list")
         <input placeholder="$i18n.getText('employee.start.type')..." id="employee-filter" type="text">
     </div>
 
+    <div class="employees-spinner"></div>
+
     <table id="employees-table" class="aui">
         <thead>
         <tr>
