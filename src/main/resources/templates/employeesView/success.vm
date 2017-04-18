@@ -38,3 +38,7 @@ $webResourceManager.requireResourcesForContext("employees-view-list")
     </table>
 
 </div>
+
+<div class="employees-animate-container" style="display: none">
+    <img class="emloyees-diablo" src="$!requestContext.canonicalBaseUrl/download/resources/ua.softlist.employee.employees-list:employees-view-list-resources/images/heck.gif" alt="heck">
+</div>

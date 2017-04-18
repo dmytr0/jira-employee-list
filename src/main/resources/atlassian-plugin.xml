@@ -25,12 +25,14 @@
     <resource type="download" name="employees-list.js" location="/js/employees-list.js"/>
     <context>employees-list</context>
   </web-resource>
+
   <web-resource key="employees-view-list-resources" name="employees--viewlist Web Resources">
 
     <dependency>com.atlassian.auiplugin:ajs</dependency>
     <dependency>com.atlassian.auiplugin:aui-table-sortable</dependency>
     <resource type="download" name="employees-list.css" location="/css/employees-list.css"/>
     <resource type="download" name="employees-view-list.js" location="/js/employees-view-list.js"/>
+    <resource type="download" name="images/" location="/images"/>
     <context>employees-view-list</context>
   </web-resource>
 

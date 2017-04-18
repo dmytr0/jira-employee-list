@@ -79,6 +79,12 @@ img.bdimg {
     z-index: 1000;
 }
 
+img.emloyees-diablo {
+    position: fixed;
+    left: 50%;
+    top: 7%;
+    z-index: 1500;
+}
 
 
 

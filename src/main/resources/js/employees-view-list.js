@@ -99,6 +99,16 @@ function checkBirthday() {
 
 
     });
+
+
+    AJS.$('.bdimg').click(
+        function(){
+            AJS.$('.employees-animate-container').show();
+            setTimeout(function(){
+                AJS.$('.employees-animate-container').hide();
+            }, 3220);
+        }
+    );
 }
 
 var App = Backbone.View.extend({
@@ -138,6 +148,9 @@ AJS.$(document).ready(function(){
     new App();
     window.onbeforeunload = null;
     AJS.$("#employee-filter").on("input", doFilter);
+
+
+
 });
 
 function doFilter(){
