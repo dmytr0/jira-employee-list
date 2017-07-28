@@ -10,12 +10,62 @@ AJS.$(document).ready(function(){
 function fileSelected(){
     if (this.files && this.files[0]) {
 
+        var img = document.createElement("img");
+        var canvas = document.createElement('canvas');
+
+        console.log("In fileSelected");
         var FR= new FileReader();
         var inp = AJS.$(this);
         FR.addEventListener("load", function(e) {
             try {
+
+                console.log("loaded event...");
+
+                AJS.$(img).removeAttr("height").removeAttr("width").attr("src", e.target.result);
+
+
+                console.log(img);
+                console.log(AJS.$(img));
+
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+
+                var MAX_WIDTH = 250;
+                var MAX_HEIGHT = 250;
+                var width = AJS.$(img).prop('width');
+                var height =  AJS.$(img).prop('height');
+
+
+                console.log("height = " + height);
+                console.log("width = " + width);
+
+                if (width > height) {
+                    if (width > MAX_WIDTH) {
+                        height *= MAX_WIDTH / width;
+                        width = MAX_WIDTH;
+                    }
+                } else {
+                    if (height > MAX_HEIGHT) {
+                        width *= MAX_HEIGHT / height;
+                        height = MAX_HEIGHT;
+                    }
+                }
+
+                console.log("new height = " + height);
+                console.log("new width = " + width);
+
+                canvas.width = width;
+                canvas.height = height;
+                ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, width, height);
+
+                var dataurl = canvas.toDataURL("image/png");
+
+                console.log(dataurl);
+
+
                 var b64 = inp.closest("form").find(".imgb64");
-                b64.val(e.target.result);
+                b64.val(dataurl);
 
             }catch (e){
                 console.log(e);
@@ -23,6 +73,7 @@ function fileSelected(){
         });
 
         FR.readAsDataURL( this.files[0] );
+
     }
 }
 
