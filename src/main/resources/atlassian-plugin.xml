@@ -74,4 +74,9 @@
     <entity>ua.softlist.employee.jira.Entity.EmployeeEntity</entity>
   </ao>
 
+  <global-permission key="ua.softlist.employee.view.globalpermission"
+                     i18n-name-key="ua.softlist.employee.view.globalpermission.name"
+                     i18n-description-key="ua.softlist.employee.view.globalpermission.description"
+                     anonymous-allowed="false"/>
+
 </atlassian-plugin>
