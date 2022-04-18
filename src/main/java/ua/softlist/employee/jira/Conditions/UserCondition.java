@@ -5,11 +5,17 @@ import com.atlassian.jira.plugin.webfragment.conditions.AbstractWebCondition;
 import com.atlassian.jira.plugin.webfragment.model.JiraHelper;
 import com.atlassian.jira.user.ApplicationUser;
 
-public class UserCondition  extends AbstractWebCondition {
+import static com.atlassian.jira.permission.GlobalPermissionKey.of;
+
+public class UserCondition extends AbstractWebCondition {
 
 
     @Override
     public boolean shouldDisplay(ApplicationUser applicationUser, JiraHelper jiraHelper) {
-        return applicationUser != null && ComponentAccessor.getUserManager().isUserExisting(applicationUser);
+        try {
+            return ComponentAccessor.getGlobalPermissionManager().hasPermission(of("ua.softlist.employee.view.globalpermission"), applicationUser);
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
