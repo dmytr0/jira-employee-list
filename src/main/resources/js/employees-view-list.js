@@ -62,6 +62,7 @@ var EmployeesView = Backbone.View.extend({
 var collectionMain = new EmployeesCollection();
 
 function checkBirthday() {
+    console.log("Checking Birthday...")
     var now = new Date();
     var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     var todayEnd = new Date(today.valueOf() + 86399999);
@@ -130,10 +131,10 @@ var App = Backbone.View.extend({
         AJS.$('.spinner').slideToggle();
 
         try {
-            AJS.tablessortable.setTableSortable(AJS.$("#employees-table"));
+            // AJS.tablessortable.setTableSortable(AJS.$("#employees-table"));
 
             checkBirthday();
-            sort();
+            // sort();
         }
         catch (e){
             console.log(e);
