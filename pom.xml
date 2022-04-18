@@ -7,7 +7,6 @@
     <version>1.1.0-sftlst</version>
     <organization>
         <name>Dmytro Polishchuk</name>
-        <url>https://vk.com/singlejava</url>
     </organization>
     <name>employees-list</name>
     <description>This is the employees-list plugin for Atlassian JIRA.</description>
